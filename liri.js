@@ -58,7 +58,7 @@ switch (command) {
 
 var writeableObj = "";
 
-//function calls for cases
+//function calls for cases --------------------------------------------------------------------------------------------------------
 
 //twitter function
 function getMyTweets(){
@@ -69,11 +69,11 @@ function getMyTweets(){
 		console.log('This is my last '+response.length+' tweets.')
 		for (var i = 0; i < response.length; i++) {
 			console.log('#'+(i+1)+": "+response[i].text);
-			writeableObj = ', '+'#'+(i+1)+": "+response[i].text;
+			writeableObj += ', '+'#'+(i+1)+": "+response[i].text;
 		};
-	});
-	writeableObj = command + writeableObj;
+	writeableObj = command +""+ writeableObj+"\n";
 	writeToLog(writeableObj);
+	});
 };
 
 //spotify function
@@ -87,7 +87,7 @@ function getMusicInfo(parameter){
 			console.log(err);
 		};
 		body = JSON.parse(body);
-		console.log(body);
+		//console.log(body);
 		console.log('--------------------------------------------------------------');
 		console.log('The highest rated match for your search is:');
 		console.log('Artist(s): '+body.tracks.items[0].artists[0].name);
@@ -144,8 +144,9 @@ function doSomethingRandom(parameter){
 		}
 		var output = data.toString().split(',');
 		//console.log(output);
-		commmand = output[0];
+		command = output[0];
 		parameter = output[1];
+		//console.log(command + parameter);
 		switch (command) {
 			case 'my-tweets':
 				getMyTweets();
