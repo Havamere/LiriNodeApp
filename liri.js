@@ -24,15 +24,19 @@ var command = process.argv[2];
 
 //sets variable to have acces to all other inputs as a parameter to the queries
 var parameter = process.argv.slice(3).join('+');
+
 //tests collection of parameter
 //console.log(parameter);
 
 //function for writing to txt.log
 function writeToLog (textParam) {
+	//appends file instead of re-writing it
 	fs.appendFile('log.txt', textParam, function(err){
+		//checks for errors and prints them if there are any
 		if (err) {
 			return console.log(err);
 		};
+		//informs user of log update
 		console.log('log.txt was updated');
 	});
 };
@@ -51,43 +55,60 @@ switch (command) {
 	case 'do-what-it-says':
 		doSomethingRandom(parameter);
 	break;
+	//covers commands not matching 4 pre-defined ones
 	default:
 		console.log('That command was not recognized. Please try again.');
-
 };
 
+//placeholder for string variable to be written to log.txt
 var writeableObj = "";
 
 //function calls for cases --------------------------------------------------------------------------------------------------------
 
-//twitter function
+//twitter function gets last 20 tweets from user based on set parameters
 function getMyTweets(){
-	tweets.get('statuses/user_timeline', twitterSearchParam, function(err, response, data){
+	tweets.get('statuses/user_timeline', twitterSearchParam, function(err, response){
+		//logs errors if found
 		if (err) {
 			console.log(err);
 		};
-		console.log('This is my last '+response.length+' tweets.')
-		for (var i = 0; i < response.length; i++) {
-			console.log('#'+(i+1)+": "+response[i].text);
-			writeableObj += ', '+'#'+(i+1)+": "+response[i].text;
-		};
+		//console.log(response);
+	 	console.log('This is my last '+response.length+' tweets.')
+	 	//information returned is in array format
+	 	for (var i = 0; i < response.length; i++) {
+	 		//logs tweet message and creation date
+	 		console.log('#'+(i+1)+": "+response[i].text);
+	 		console.log('Posted on: '+response[i].created_at);
+	 		//builds string to be written to log.txt
+	 		writeableObj += ', '+'#'+(i+1)+": "+response[i].text + response[i].created_at;
+	 	};
+	//adds command to beginning of string
 	writeableObj = command +""+ writeableObj+"\n";
+	//writes to log.txt
 	writeToLog(writeableObj);
 	});
 };
 
-//spotify function
+//spotify function returns first match spotify finds to song parameter
 function getMusicInfo(parameter){
+	//covers case of no parameter entered after command
 	if (!parameter) {
 		parameter = "what's+my+age+again";
 	};
+
+	//api query url for request, limits parameter search to trrack and limit of 1 song return
 	var queryUrl = 'https://api.spotify.com/v1/search?query='+parameter+'&limit=1&type=track';
+
+	//runs call to api
 	request(queryUrl, function(err, response, body){
+		//logs errors if present
 		if (err) {
 			console.log(err);
 		};
+		//formats information received into object notation
 		body = JSON.parse(body);
 		//console.log(body);
+		//Writes user friendly response
 		console.log('--------------------------------------------------------------');
 		console.log('The highest rated match for your search is:');
 		console.log('Artist(s): '+body.tracks.items[0].artists[0].name);
@@ -95,9 +116,11 @@ function getMusicInfo(parameter){
 		console.log('Preview Link: '+body.tracks.items[0].preview_url);
 		console.log('Album Name: '+body.tracks.items[0].album.name);
 		console.log('--------------------------------------------------------------');
+		
 		//writes query request and response to log.txt
 		writeableObj = command+", "+parameter+", "+body.tracks.items[0].artists[0].name+", "+body.tracks.items[0].name+", "+body.tracks.items[0].preview_url+", "+body.tracks.items[0].album.name+"\n";
 		
+		//writes to log.txt
 		writeToLog(writeableObj);
 	});
 };
@@ -133,20 +156,27 @@ function getMovieInfo(parameter){
 		//writes query request and response to log.txt
 		writeableObj = command+", "+parameter+", "+body.Title+", "+body.Year+", "+body.imdbRating+", "+body.Country+", "+body.Language+", "+body.Plot+", "+body.Actors+", "+body.tomatoRating+", "+body.tomatoURL+"\n";
 
+		//writes to log.txt
 		writeToLog(writeableObj);
 	});
 };
 
 function doSomethingRandom(parameter){
 	fs.readFile('random.txt', 'utf8', function(err, data){
+		//logs errors if present
 		if (err){
 			console.log(err);
 		}
+		//takes data from random.txt file, creates a string variable, then splits it into an array.
 		var output = data.toString().split(',');
 		//console.log(output);
+
+		//sets new values to command and parameter from the output array created by random.txt
 		command = output[0];
 		parameter = output[1];
 		//console.log(command + parameter);
+
+		//runs new parameters back through switch case for proper handling
 		switch (command) {
 			case 'my-tweets':
 				getMyTweets();
@@ -157,6 +187,7 @@ function doSomethingRandom(parameter){
 			case 'movie-this':
 				getMovieInfo(parameter);
 			break;
+			//covers commands not matching 3 pre-defined ones
 			default:
 				console.log('That command was not recognized. Please try again.');
 		};
