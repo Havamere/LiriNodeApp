@@ -14,3 +14,26 @@ my-tweets, #1: Btw, If you want to read something inspirational and thought prov
 #LivingByChoice, #2: To true @richardbranson , too true. https://t.co/8aL9RQqFhM, #3: Learning a new skill can be a challenging and rewarding experience.  Making great money off of it makes it that much sweeter. #UCFBootCamp, #4: Never forget to take a minute and appreciate the world you live in. It's pretty awesome sometimes. http://t.co/7AjEJdjMg9, #5: RT @DeepakChopra: Religion is belief in someone else's experience. Spirituality is having your own experience., #6: So, it's my goal to use my Twitter account to make people's lives better in some way.  Here's hoping whoever follows me benefits from it., #7: He didn't even ask if he could bum a ride.  #hitchhiker http://t.co/WeM1YYYlxg, #8: Here is to hoping this all works out for the best.
 my-tweets, #1: For anyone interested, check out my projects I have been working on through UCF's Coding Bootcamp. https://t.co/1Uxn7OtfsP, #2: Btw, If you want to read something inspirational and thought provoking, check out my blog @ https://t.co/PqwwgzChLG
 #LivingByChoice, #3: To true @richardbranson , too true. https://t.co/8aL9RQqFhM, #4: Learning a new skill can be a challenging and rewarding experience.  Making great money off of it makes it that much sweeter. #UCFBootCamp, #5: Never forget to take a minute and appreciate the world you live in. It's pretty awesome sometimes. http://t.co/7AjEJdjMg9, #6: RT @DeepakChopra: Religion is belief in someone else's experience. Spirituality is having your own experience., #7: So, it's my goal to use my Twitter account to make people's lives better in some way.  Here's hoping whoever follows me benefits from it., #8: He didn't even ask if he could bum a ride.  #hitchhiker http://t.co/WeM1YYYlxg, #9: Here is to hoping this all works out for the best.
+spotify-this-song, cold, Coldplay, Adventure Of A Lifetime, https://p.scdn.co/mp3-preview/f5c8203c517a906dd581e0faeca84d1e0206c8b6, A Head Full Of Dreams
+spotify-this-song, cold, undefined, Adventure Of A Lifetime, https://p.scdn.co/mp3-preview/f5c8203c517a906dd581e0faeca84d1e0206c8b6, A Head Full Of Dreams
+spotify-this-song, cold, undefined, Hymn For The Weekend, https://p.scdn.co/mp3-preview/0e36103f9c968a7f07d502003a109c314f36ae9c, A Head Full Of Dreams
+spotify-this-song, cold, undefined, A Sky Full of Stars, https://p.scdn.co/mp3-preview/dca7402083b8dbf0e2a5e91f49eb76bde94cd493, Ghost Stories
+spotify-this-song, cold, undefined, First, https://p.scdn.co/mp3-preview/a77f44ffd2e01aecd9c900f7211fe6470d53c780, Hold My Home
+spotify-this-song, cold, undefined, Viva La Vida, https://p.scdn.co/mp3-preview/bb0a310830636ebf8e5f6a1fa03d129a9724f7ec, Viva La Vida Or Death And All His Friends
+spotify-this-song, cold, undefined, Adventure Of A Lifetime, https://p.scdn.co/mp3-preview/f5c8203c517a906dd581e0faeca84d1e0206c8b6, A Head Full Of Dreams
+spotify-this-song, cold, undefined, Hymn For The Weekend, https://p.scdn.co/mp3-preview/0e36103f9c968a7f07d502003a109c314f36ae9c, A Head Full Of Dreams
+spotify-this-song, cold, undefined, First, https://p.scdn.co/mp3-preview/a77f44ffd2e01aecd9c900f7211fe6470d53c780, Hold My Home
+spotify-this-song, cold, undefined, A Sky Full of Stars, https://p.scdn.co/mp3-preview/dca7402083b8dbf0e2a5e91f49eb76bde94cd493, Ghost Stories
+spotify-this-song, cold, undefined, Viva La Vida, https://p.scdn.co/mp3-preview/bb0a310830636ebf8e5f6a1fa03d129a9724f7ec, Viva La Vida Or Death And All His Friends
+spotify-this-song, cold, undefined, Adventure Of A Lifetime, https://p.scdn.co/mp3-preview/f5c8203c517a906dd581e0faeca84d1e0206c8b6, A Head Full Of Dreams
+spotify-this-song, cold, undefined, First, https://p.scdn.co/mp3-preview/a77f44ffd2e01aecd9c900f7211fe6470d53c780, Hold My Home
+spotify-this-song, cold, undefined, Hymn For The Weekend, https://p.scdn.co/mp3-preview/0e36103f9c968a7f07d502003a109c314f36ae9c, A Head Full Of Dreams
+spotify-this-song, cold, undefined, A Sky Full of Stars, https://p.scdn.co/mp3-preview/dca7402083b8dbf0e2a5e91f49eb76bde94cd493, Ghost Stories
+spotify-this-song, cold, undefined, Viva La Vida, https://p.scdn.co/mp3-preview/bb0a310830636ebf8e5f6a1fa03d129a9724f7ec, Viva La Vida Or Death And All His Friends
+spotify-this-song, cold, Coldplay, Adventure Of A Lifetime, https://p.scdn.co/mp3-preview/f5c8203c517a906dd581e0faeca84d1e0206c8b6, A Head Full Of Dreams
+spotify-this-song, cold, Coldplay, A Sky Full of Stars, https://p.scdn.co/mp3-preview/dca7402083b8dbf0e2a5e91f49eb76bde94cd493, Ghost Stories
+spotify-this-song, cold, Coldplay, Hymn For The Weekend, https://p.scdn.co/mp3-preview/0e36103f9c968a7f07d502003a109c314f36ae9c, A Head Full Of Dreams
+spotify-this-song, cold, Cold War Kids, First, https://p.scdn.co/mp3-preview/a77f44ffd2e01aecd9c900f7211fe6470d53c780, Hold My Home
+spotify-this-song, cold, Coldplay, Viva La Vida, https://p.scdn.co/mp3-preview/bb0a310830636ebf8e5f6a1fa03d129a9724f7ec, Viva La Vida Or Death And All His Friends
+spotify-this-song, cold, Coldplay, Viva La Vida, https://p.scdn.co/mp3-preview/bb0a310830636ebf8e5f6a1fa03d129a9724f7ec, Viva La Vida Or Death And All His Friends
+spotify-this-song, machinehead, Bubbaloney, MachineHead, https://p.scdn.co/mp3-preview/4734e4beccf8e815568d436c087310c81cd2382e, MachineHead Part One

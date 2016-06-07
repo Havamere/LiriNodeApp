@@ -96,8 +96,8 @@ function getMusicInfo(parameter){
 		parameter = "what's+my+age+again";
 	};
 
-	//api query url for request, limits parameter search to trrack and limit of 1 song return
-	var queryUrl = 'https://api.spotify.com/v1/search?query='+parameter+'&limit=1&type=track';
+	//api query url for request, limits parameter search to trrack and limit of 5 song return
+	var queryUrl = 'https://api.spotify.com/v1/search?q='+parameter+'&limit=5&type=track';
 
 	//runs call to api
 	request(queryUrl, function(err, response, body){
@@ -107,19 +107,20 @@ function getMusicInfo(parameter){
 		};
 		//formats information received into object notation
 		body = JSON.parse(body);
-		//console.log(body);
+
 		//Writes user friendly response
 		console.log('--------------------------------------------------------------');
-		console.log('The highest rated match for your search is:');
-		console.log('Artist(s): '+body.tracks.items[0].artists[0].name);
-		console.log('Song Title: '+body.tracks.items[0].name);
-		console.log('Preview Link: '+body.tracks.items[0].preview_url);
-		console.log('Album Name: '+body.tracks.items[0].album.name);
-		console.log('--------------------------------------------------------------');
-		
-		//writes query request and response to log.txt
-		writeableObj = command+", "+parameter+", "+body.tracks.items[0].artists[0].name+", "+body.tracks.items[0].name+", "+body.tracks.items[0].preview_url+", "+body.tracks.items[0].album.name+"\n";
-		
+		console.log('The 5 highest rated matchs for your search is:');
+		for (var i = 0; i < body.tracks.items.length; i++) {
+			//console.log(body.tracks.items[i]);
+			console.log('Artist(s): '+body.tracks.items[i].artists[0].name);
+			console.log('Song Title: '+body.tracks.items[i].name);
+			console.log('Preview Link: '+body.tracks.items[i].preview_url);
+			console.log('Album Name: '+body.tracks.items[i].album.name);
+			console.log('--------------------------------------------------------------');
+			//writes query request and response to log.txt
+			writeableObj = command+", "+parameter+", "+body.tracks.items[i].artists[0].name+", "+body.tracks.items[i].name+", "+body.tracks.items[i].preview_url+", "+body.tracks.items[i].album.name+"\n";	
+		};
 		//writes to log.txt
 		writeToLog(writeableObj);
 	});
